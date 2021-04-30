@@ -1,0 +1,50 @@
+.ideas {
+  padding: 75px 0 0;
+  background-color: $gray_bg;
+
+  &__container {
+    @extend .container;
+    padding: 0;
+  }
+
+  &__footer {
+    padding: 45px 0 47px;
+    background: rgb(33,27,25);
+    background: linear-gradient(90deg, rgba(33,27,25,1) 0%, rgba(56,40,32,1) 50%, rgba(78,52,39,1) 100%);
+
+    .container {
+
+      padding: 0 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+
+      .title__ideas{
+
+        .title-28{
+          font:400 28px $font_raleway;
+          color:$white;
+
+          &--color{
+            color:$activ_color;
+          }
+        }
+      }
+
+      .button__ideas{
+        
+
+        .button--style{
+          padding: 20px 20px;
+          font:800 14px $font_raleway;
+
+          &:hover{
+            background-color: $hov_act;  
+            transition-duration: 0.3s;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.device{
+	padding-top: 80px;
+
+	.container{
+		display: flex;
+		justify-content: space-between;
+
+		.device__item{
+			padding-top: 110px;
+
+
+			.text{
+				max-width: 695px;
+			}
+			.title-30,
+			.text{
+				text-align: left;
+			}
+
+
+			.list{
+				ul{
+					list-style-image: url(../images/dest/ul-1.png);
+					padding-left: 60px;
+
+
+					li{
+						list-style: inherit;
+						padding-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+}
