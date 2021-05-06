@@ -5,6 +5,10 @@
   &__container {
     @extend .container;
     padding: 0;
+
+    img{
+      display: block;
+    }
   }
 
   &__footer {

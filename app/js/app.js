@@ -8,7 +8,7 @@ $(document).ready(function () {
 		},
 		// If we need pagination
 		pagination: {
-		  el: '.sliper__pagination',
+		  el: '.slider__pagination',
 		},
 	  
 		// Navigation arrows
@@ -22,14 +22,32 @@ $(document).ready(function () {
 	  $( '.projects__tabs' ).tabs();
 
 
+
+	  // Video player
+	const playButton = $('#video__play');
+	const content = $('.video__content');
+
+	playButton.on('click', function() {
+		if (video.paused == true) {
+			video.play();
+			content.addClass('hidden');
+		} else {
+			video.pause();
+			content.removeClass('hidden');
+		}
+	});
+
+
 	 const swiperPosts = new Swiper('.swiper-posts', {
 	
 	  loop: true,
+	  
 
 	  // If we need pagination
 	  pagination: {
 	    el: '.pagination-posts',
 	    clickable: true,
+	    
 	  },
 
 	  // Navigation arrows
