@@ -5,6 +5,14 @@
 		display: flex;
 		justify-content: space-between;
 
+
+
+		img{
+			display: block;
+		}
+
+
+
 		.device__item{
 			padding-top: 110px;
 
@@ -20,13 +28,22 @@
 
 			.list{
 				ul{
-					list-style-image: url(../images/dest/ul-1.png);
-					padding-left: 60px;
-
+					// list-style-image: url(../images/dest/right.png);
+					padding-left: 100px;
 
 					li{
-						list-style: inherit;
+						// list-style: inherit;
 						padding-bottom: 10px;
+						position: relative;
+
+						&:before{
+							content: '';
+							background: url(../images/dest/ul-1.png) ;
+							width: 21px;
+							height: 21px;
+							position: absolute;
+							left:-50px;
+						}
 					}
 				}
 			}

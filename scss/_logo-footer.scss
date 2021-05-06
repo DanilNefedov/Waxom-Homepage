@@ -1,0 +1,17 @@
+.logo-footer{
+	padding: 140px 0;
+	background: url(../images/dest/second-back.jpg)no-repeat 100%;
+	background-size: cover;
+
+
+	.container{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		a{
+			display: block;
+		}
+		
+	}
+}

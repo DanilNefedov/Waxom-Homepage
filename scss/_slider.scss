@@ -3,6 +3,7 @@
     max-width: 1200px;
     padding: 0 15px;
     margin:  0 auto;
+    position: relative;
 }
 
 .slider {
@@ -62,6 +63,8 @@
     // .slider__pagination
 
     // &__pagination {
+    //     position: absolute;
+        
     // }
 
     // .slider__prev
