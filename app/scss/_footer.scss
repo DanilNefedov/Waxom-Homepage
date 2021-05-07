@@ -3,9 +3,13 @@
 	color:$dark;
 
 	&__top{
-		padding: 80px 0 75px;
+		padding: 80px 0 60px;
 		background: #191919;
 		font-size: 14px ;
+
+		.container{
+			padding: 0 28px;
+		}
 
 		.col--25{
 
@@ -19,12 +23,13 @@
 			}
 			.text{
 				text-align: left;
-				padding: 25px 0; 
+				padding: 20px 0 27px; 
 				margin: 0;
 				font-size: 14px;
 				line-height: 20px;
 				word-wrap: break-word;
 				// max-width: 264px;
+				line-height: 23px;
 			}
 			.link--style{
 				display: block;
@@ -46,11 +51,14 @@
 					top:6px;
 				}
 			}
+			.title-24{
+				margin-bottom: 15px;
+			}
 			.commit{
 				
 				.data {
 					color:$data_color;
-					padding:10px 0; 
+					padding:13px 0 10px;	 
 					transition: .3s;
 					font-size: 12px;
 				}
@@ -60,7 +68,7 @@
 					font-size: 14px;
 					word-wrap: break-word;
 					border-bottom: 1px solid $data_color;
-					padding: 0 0 20px;
+					padding: 0 0 25px;
 
 					
 				}
@@ -85,6 +93,7 @@
 					color:$dark;
 					font-size: 14px;
 					transition: .3s;
+					line-height: 21px;
 
 					.twitt--color{
 						color:$blue_color;
@@ -122,7 +131,7 @@
 	}
 
 	&__bottom{	
-		padding: 46px 0 50px;
+		padding: 45px 0 80px;
 		background: #111;
 		font-size: 13px;
 
@@ -133,6 +142,7 @@
 
 		.container{
 			@extend .row;
+			padding: 0 29px;
 
 			@include media(720){
 				display: block;
@@ -207,7 +217,7 @@
 
 	.dribble{
 		@extend .row;
-
+		padding-top: 12px;
 
 		&__item{
 			width:calc(50% - 5px);
@@ -215,7 +225,7 @@
 			line-height: 0;
 
 			img{
-				width: 100%;
+				width: 98%;
 			}
 		}
 	}

@@ -1,5 +1,5 @@
 .device{
-	padding-top: 80px;
+	// padding-top: 20px;
 
 	.container{
 		display: flex;
@@ -14,11 +14,19 @@
 
 
 		.device__item{
-			padding-top: 110px;
+			padding-top: 80px;
 
 
+			img{
+				padding-left: 55px;
+			}
+
+			.title-30{
+				padding-top: 105px;
+			}
 			.text{
 				max-width: 695px;
+				line-height: 30px;
 			}
 			.title-30,
 			.text{
@@ -27,13 +35,14 @@
 
 
 			.list{
+				
 				ul{
 					// list-style-image: url(../images/dest/right.png);
-					padding-left: 100px;
+					padding-left: 110px;
 
 					li{
 						// list-style: inherit;
-						padding-bottom: 10px;
+						padding-bottom: 15px;
 						position: relative;
 
 						&:before{

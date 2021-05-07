@@ -1,10 +1,14 @@
 .projects{
-    padding: 75px 0 80px;
+    padding: 75px 0 93px;
     
     .container{
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        .text{
+            line-height: 25px;
+        }
     }
 
     &__tabs{
@@ -21,6 +25,7 @@
         color: #998675;
         transition: 0.3s;
 
+
         &:hover{
             color: $white;
         }
@@ -29,10 +34,11 @@
    		font: 800 14px/1.5 $font_raleway;      
         color: $white;
         background-color: $color_btn;
-        padding: 21px 39px ;
+        padding: 17px 39px ;
         border-radius: 3px;
         text-transform: uppercase;
         transition: .3s;
+
 
         &:hover {
             background-color: $hov_act;  
@@ -40,7 +46,7 @@
         
     }
     &__button {
-        margin-top: 10px;
+        margin-top: 2px;
     }
 }
 .ui-tabs .ui-tabs-panel{
@@ -49,7 +55,7 @@
     justify-content: space-between;
 }
 .ui-tabs .ui-tabs-nav{
-    margin-bottom: 40px;
+    margin-bottom: 22px;
 }
 .ui-tabs .ui-tabs-nav li{
     margin: 0px 5px;
