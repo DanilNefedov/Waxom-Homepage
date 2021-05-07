@@ -9,7 +9,12 @@
   video {
     object-fit: cover;
   }
-
+  .text--white{
+    line-height: 28px;
+  }
+  .title-30--white{
+    padding-top: 12px;
+  }
   &__time {
     font-size: 14px;
     color: $activ_color;
@@ -38,7 +43,7 @@
     border-radius: 50%;
     border: none;
     outline: none;
-    margin: 0 0 35px;
+    margin: 0 0 25px;
     cursor: pointer;
     background: url("../images/dest/play.png") no-repeat 50% 50% rgba(0,0,0,.2);
 

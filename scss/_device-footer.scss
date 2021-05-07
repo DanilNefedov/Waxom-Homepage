@@ -1,28 +1,35 @@
 .device-footer{
-	padding: 70px 0 85px;
+	padding: 70px 0 70px;
 	background: rgb(33,27,25);
     background: linear-gradient(90deg, rgba(33,27,25,1) 0%, rgba(56,40,32,1) 50%, rgba(78,52,39,1) 100%);
 
     .container{
-    	max-width: 950px;
-
+    	// max-width: 970px;
+    	margin:0 auto;
+    	max-width: 940px;
     	ul{
-	    	display: flex;
-	    	justify-content: space-between;
+    		display: flex;
+	    	// justify-content: space-between;
 
 	    	.footer__item{
 	    		text-align: center;
 	    		position: relative;
+	    		// padding-right: 90px;
+				display: inline-block;
+				float: left;
+				padding-right: 120px;
+	    	
+
 
 	    		.number{
 	    			font: 300 38px $font_montserrat;
 	    			color:$white;
-	    			padding: 25px 0 15px;
+	    			padding: 17px 0 10px;
 	    		}
 
 	    		.title-numb{
 	    			color:$activ_color;
-
+					
 
 	    			&:before{
 	    				content: '';
@@ -31,11 +38,14 @@
 					    height: 2px;
 					    background: $white;
 					    bottom: 0;
-					    bottom: -30px;
-					    left: calc(50% - 15px);
+					    bottom: -10px;
+					    left: calc(50% - 75px);
 	    			}
 	    		}
 	    	}
+			.footer__item:last-child{
+				// padding-right: 0;
+			}
 	    }
     }
 }

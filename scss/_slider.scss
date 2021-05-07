@@ -1,17 +1,17 @@
-
-.container {
-    max-width: 1200px;
-    padding: 0 15px;
-    margin:  0 auto;
-    position: relative;
-}
-
 .slider {
     background: url(../images/dest/mountaine.jpg) 50%/cover no-repeat;
-    min-height: 100vh;
+    // min-height: 100vh;
     color: $white;
+    
+    
+    .container {
+        // max-width: 1200px;
+        // padding: 0 15px;
+        margin:  0 auto;
+        position: relative;
+        max-width: 1650px;
+    }
     // .slider__title
-
     &__title {
         font:500 36px $font_raleway;
     }
@@ -35,10 +35,12 @@
     // .slider__btn-wrapper
 
     &__btn-wrapper{
+        padding: 12px 0 0;
+
 
         .button--style{
             font: 800 14px/1.64 $font_raleway;
-            padding: 21px 37px;
+            padding: 19px 31px;
 
             &:hover {
                 background-color: $hov_act;  
@@ -76,7 +78,7 @@
         transition-duration: 0.1s;
         transition-delay: 0s;
         transition-timing-function: ease-in-out;
-        --swiper-navigation-size:70px;
+        --swiper-navigation-size:81px;
         &:hover {
             color: $hov_act;
         }
@@ -101,8 +103,10 @@
 // }
 // .swiper-wrapper {
 // }
-// .swiper-slide {
-// }
+.swiper-slide {
+    max-width: 1650px;
+
+}
 // .container {
 // }
 
@@ -111,7 +115,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 380px 0 379px 0;
+    padding: 372px 0 379px 0;
 }
 .swiper-pagination {
 
@@ -130,7 +134,7 @@
 
 .swiper-container-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-custom, .swiper-pagination-fraction{
-    bottom: 37px;
+    bottom: 44px;
 }
 
 // .swiper-button-prev {
