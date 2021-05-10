@@ -3,13 +3,27 @@
 	background: rgb(33,27,25);
     background: linear-gradient(90deg, rgba(33,27,25,1) 0%, rgba(56,40,32,1) 50%, rgba(78,52,39,1) 100%);
 
+    @include media(800){
+    	padding: 40px;
+
+    	@include media(500){
+    		padding: 20px 0;
+    	}
+    }
+
     .container{
     	// max-width: 970px;
     	margin:0 auto;
     	max-width: 940px;
+
+
     	ul{
     		display: flex;
 	    	// justify-content: space-between;
+
+	    	@include media(650){
+	    		flex-wrap:wrap;
+	    	}
 
 	    	.footer__item{
 	    		text-align: center;
@@ -19,17 +33,44 @@
 				float: left;
 				padding-right: 120px;
 	    	
+				@include media(1050){
+					padding:0 25px;
+					margin: 0 auto;
 
+					@include media(650){
+						width: 33%;
+						margin-bottom: 35px;
+						padding: 0;
+					}
+				}
+
+				img{
+					@include media(400){
+						padding: 0 20px;
+					}
+				}
 
 	    		.number{
 	    			font: 300 38px $font_montserrat;
 	    			color:$white;
 	    			padding: 17px 0 10px;
+
+	    			@include media(800){
+	    				font-size: 27px;
+
+	    				@include media(400){
+	    					font-size: 16px;
+	    					padding: 5px 0;
+	    				}
+	    			}
 	    		}
 
 	    		.title-numb{
 	    			color:$activ_color;
 					
+	    			@include media(800){
+	    				font-size: 14px;
+	    			}
 
 	    			&:before{
 	    				content: '';
@@ -40,6 +81,10 @@
 					    bottom: 0;
 					    bottom: -10px;
 					    left: calc(50% - 75px);
+
+					    @include media(1050){
+					    	left: calc(50% - 15px);
+					    }
 	    			}
 	    		}
 	    	}

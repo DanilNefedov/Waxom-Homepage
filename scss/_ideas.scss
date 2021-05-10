@@ -2,9 +2,26 @@
   padding: 75px 0 0;
   background-color: $gray_bg;
 
+  @include media(1050){
+    padding-top: 50px;
+
+    @include media(650){
+      padding-top: 20px;
+    }
+  }
+
   .container{
     .text{
       line-height: 25px;
+
+      @include media(650){
+        font-size: 14px;
+        line-height: 20px;
+
+        @include media(550){
+          font-size: 12px;
+        }
+      }
     }
   }
 
@@ -24,38 +41,96 @@
     background: rgb(33,27,25);
     background: linear-gradient(90deg, rgba(33,27,25,1) 0%, rgba(56,40,32,1) 50%, rgba(78,52,39,1) 100%);
 
+    @include media(850){
+      padding:25px 0;
+    }
+
+
     .container {
+
+
 
       padding: 0 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
 
-
+      @include media(650){
+        padding: 0 15px;
+      }
 
       .title__ideas{
+
+        @include media(550){
+          max-width: 250px; 
+          
+        }
+
+        .title-18{
+          @include media(650){
+            font-size: 14px;
+
+            @include media(550){
+              padding-top: 10px;
+            }
+          }
+        }
 
         .title-28{
           font:400 28px $font_raleway;
           color:$white;
 
+          @include media(850){
+            font-size: 20px;
+
+            @include media(650){
+              font-size: 16px;
+            }
+          }
+
           &--color{
             color:$activ_color;
           }
         }
+
       }
 
       .button__ideas{
         margin-top: 10px;
+
+        @include media(850){
+          margin-top: 0;
+        }
 
         .button--style{
 
           padding: 16px 20px;
           font:800 14px $font_raleway;
 
+
+          @include media(850){
+            padding: 10px 15px;
+            font-size: 12px;
+
+            @include media(650){
+              font-weight: 500;
+
+              @include media(550){
+                padding: 5px 10px;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+              }
+            }
+          }
+
           &:hover{
             background-color: $hov_act;  
             transition-duration: 0.3s;
+          }
+
+          a{
+            color:$white;
           }
         }
       }
