@@ -2,6 +2,15 @@
   padding: 75px 0 77px;
   background-color: $white;
 
+  @include media(870){
+    padding: 50px 0 30px;
+
+    @include media(600){
+      padding: 30px 0 30px;
+    }
+  }
+
+
   &__icon {
     display: flex;
     align-items: flex-end;
@@ -9,15 +18,30 @@
     justify-content: center;
     margin: 0 0 25px;
 
+    @include media(600){
+      margin-bottom: 15px;
+    }
+
     img {
       transition: .3s;
       transform: translateX(50%);
       opacity: 1;
 
+      @include media(600){
+        max-height: 40px;
+        max-width: 40px;
+      }
+
+
       & + img {
         transition: .3s;
         transform: translateX(-50%);
         opacity: 0;
+
+        @include media(600){
+          max-height: 40px;
+          max-width: 40px;
+        }
       }
     }
   }
@@ -28,6 +52,11 @@
     color: $dark;
     margin: 0 0 15px;
     transition: .3s;
+
+    @include media(600){
+      font-size: 18px;
+    }
+
   }
 
   &__text {
@@ -36,44 +65,76 @@
     line-height: 1.7;
     letter-spacing: 0.02em;
     text-align: center;
+
+    @include media (600){
+      font-size: 12px;
+    }
   }
 
+.row{
+
+  @include media(870){
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
   .col--25 {
-    padding-bottom: 30px;
-    position: relative;
+      padding-bottom: 30px;
+      position: relative;
 
-    &:after {
-      content: '';
-      position: absolute;
-      width: 70px;
-      height: 3px;
-      background: $light_line;
-      bottom: 0;
-      left: calc(50% - 35px);
-      transition: .3s;
-    }
 
-    &:hover {
-      cursor: default;
+      @include media(870){
+        padding: 0 30px 30px;
+        width: 50%;
+        margin-bottom: 20px;
 
-      .services__title {
-        color: $activ_color;
+        @include media(600){
+          padding-bottom: 20px;
+
+          @include media(400){
+            padding-right: 10px;
+            padding-left: 10px;
+          }
+        }
+
       }
 
       &:after {
-        background: $activ_color;
+        content: '';
+        position: absolute;
+        width: 70px;
+        height: 3px;
+        background: $light_line;
+        bottom: 0;
+        left: calc(50% - 35px);
+        transition: .3s;
       }
 
-      .services__icon {
+      &:hover {
+        cursor: default;
 
-        img {
-          opacity: 0;
+        .services__title {
+          color: $activ_color;
+        }
 
-          & + img {
-            opacity: 1;
+        &:after {
+          background: $activ_color;
+        }
+
+        .services__icon {
+
+          img {
+            opacity: 0;
+
+            & + img {
+              opacity: 1;
+            }
           }
         }
       }
     }
-  }
+
+} 
+  
 }

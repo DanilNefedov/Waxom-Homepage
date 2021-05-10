@@ -110,6 +110,25 @@ body {
 	text-align: center;
 	margin: 0 0 18px;
 
+	@include media(930){
+		font-size: 28px;
+		margin-bottom: 9px;
+
+		@include media(850){
+			font-size: 25px;
+
+			@include media(750){
+				font-size: 20px;
+
+
+				@include media(550){
+					font-size: 16px;
+				}
+			}	
+		}
+	}
+	
+
 	&--left {
 		@extend .title-30;
 		text-align: left;
@@ -119,6 +138,14 @@ body {
 		@extend .title-30;
 		color: $white;
 		font-weight: 500;
+
+		@include media(800){
+			font-size: 20px;
+
+			@include media(400){
+				font-size: 16px;
+			}
+		}
 	}
 }
 
@@ -127,11 +154,16 @@ body {
 	max-width: 770px;
 	margin: 0 auto 35px;
 
+
 	&--white {
 		@extend .text;
 		color: $white;
 		max-width: 570px;
 		line-height: 1.3;
+
+		@include media(800){
+			margin-bottom: 20px;
+		}
 	}
 
 	&--left {

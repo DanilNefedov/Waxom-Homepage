@@ -3,15 +3,40 @@
 	background: url(../images/dest/second-back.jpg)no-repeat 100%;
 	background-size: cover;
 
+	@include media(1050){
+		padding: 100px 0;
+
+		@include media(780){
+			padding: 50px 0;
+
+			@include media(500){
+				padding: 25px 0;
+			}
+		}
+	}
 
 	.container{
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding: 0 60px;
+
+		@include media(500){
+			padding: 0 30px;
+		}
 		a{
 			display: block;
 		}
 		
+		.logo__content{
+			@include media(1050){
+				padding: 0 20px;
+
+				@include media(500){
+					padding: 0 10px;
+				}
+			}
+		}
+
 	}
 }

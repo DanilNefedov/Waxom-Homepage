@@ -5,9 +5,18 @@
 <meta charset="UTF-8">
 <title>Waxom</title>
  <!-- Подключаем стили проекта -->
-<link rel="stylesheet" href="css/app.min.css"> 
-</head>
+<link rel="stylesheet" href="css/app.min.css">
 <link rel="shortcut icon" href="/images/dest/favicon.png" type="image/png">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<script>
+	function openMemu(){
+		document.getElementById('sidebar').classList.toggle('active');
+	}
+</script>
+
+</head>
+
 <body>
 	<div class="wrapper">
 		<div class="header">
@@ -17,20 +26,30 @@
 						<img class="logo__icon" src="./images/dest/icons/logo.png" alt="logo">
 					</a>
 				</div>
-				<nav class="navigation">
-					<a href="#" class="navigation__item">Home</a>
-					<a href="#" class="navigation__item">About Us</a>
-					<a href="#" class="navigation__item">Portfolio</a>
-					<a href="#" class="navigation__item">Features</a>
-					<a href="#" class="navigation__item">Blog</a>
-					<a href="#" class="navigation__item">Pricing</a>
-					<a href="#" class="navigation__item">Shortcodes</a>
-					<a href="#" class="navigation__item">Contact</a>
-				</nav>
+				
+				<div id="sidebar">
+					<div class="btn-mobile" onclick="openMemu()">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+
+					<nav class="navigation">
+						<a href="#" class="navigation__item">Home</a>
+						<a href="#" class="navigation__item">About Us</a>
+						<a href="#" class="navigation__item">Portfolio</a>
+						<a href="#" class="navigation__item">Features</a>
+						<a href="#" class="navigation__item">Blog</a>
+						<a href="#" class="navigation__item">Pricing</a>
+						<a href="#" class="navigation__item">Shortcodes</a>
+						<a href="#" class="navigation__item">Contact</a>
+					</nav>
+				</div>
+				
 				<div class="search">
 					<a href="#" class="search__link">
 						<img class="search__icon" src="./images/dest/icons/cart.svg" alt="cart">
- 						<!-- <img class="search__icon-hover" src="./images/dest/icons/cart-hover.svg" alt="cart"> -->
+ 						
 					</a>
 					<a href="#" class="search__link">
 						<img class="search__icon" src="./images/dest/icons/icon-search.svg" alt="search">
@@ -150,7 +169,10 @@
 						</p>
 					</div>
 					<div class="button__ideas">
-						<a class="button--style" href="#">purchase now</a>
+						<p class="button--style">
+							<a  href="#">purchase</a>
+							<a href="#">now</a> 
+						</p>
 					</div>
 				</div>
 			</div>
@@ -863,6 +885,7 @@
 
 	</div>
 <!-- Подключаем скрипты проекта -->
+
 <script src="js/app.min.js"></script> 
 </body>
 </html>

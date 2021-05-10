@@ -1,13 +1,27 @@
 .posts{
 	padding: 75px 0 0px;
 
+
+	@include media(750){
+		padding-top: 40px;
+	}
 	.text{
 		line-height: 25px;
+
+		@include media(750){
+			font-size: 14px;
+			padding: 0 40px;
+			margin-bottom: 20px;
+		}
 	}
 	.swiper-posts{
 		padding: 0 0 140px 0;
-		max-width: 1170px;
+		max-width: 1190px;
 		
+
+		@include media(750){
+			padding-bottom: 50px;
+		}
 
 			.posts__slide{
 
@@ -20,12 +34,18 @@
 
 					.coll--33{
 						max-width: 370px;
+						padding: 0 10px;
 
+						@include media(1110){
+							max-width: 33.3%;
+						}
 						.posts__img{
 							position: relative;
 
 							img{
 								display: block;
+
+
 							}
 
 						}
@@ -38,6 +58,18 @@
 							bottom:calc(100% - 91px);
 							margin-left: 20px;
 
+							@include media(750){
+								width: 40px;
+
+								@include media(550){
+									margin-left: 10px;
+									bottom: calc(100% - 80px);
+
+									@include media(500){
+										display: none;
+									}
+								}
+							}
 
 							&__date{
 								padding: 4px 10px;
@@ -45,6 +77,11 @@
 								border-radius:3px 3px 0 0;
 								font:300 24px $font_montserrat;
 								transition: .3s;
+
+								@include media(750){
+									font-size: 16px;
+									padding: 4px 5px;
+								}
 							}
 							&__month{
 								padding: 6px 10px;
@@ -52,15 +89,28 @@
 								border-radius: 0 0 3px 3px;
 								font:500 12px $font_raleway;
 								transition: .3s;
+
+								@include media(750){
+									font-size: 12px;
+									padding: 4px 5px;
+								}
 							}
 						}
 						.posts__text{
 							padding: 25px 0 30px 29px;
 							transition: .3s;
 
+							@include media(750){
+								padding: 10px 0 20px 0;
+							}
+
 							.title-20{
 								font:400 20px $font_raleway;
 								color:$dark;
+
+								@include media(750){
+									font-size: 16px;
+								}
 							}
 							.text-14{
 								padding: 17px 0 25px;
@@ -68,6 +118,11 @@
 								font-size: 14px;
 								color: $font_color;
 								line-height: 20px;
+
+								@include media(750){
+									padding: 10px 0;
+									font-size: 12px;
+								}
 							}
 							.link-posts{
 								color:$activ_color;
@@ -122,9 +177,14 @@
 			width: 20px;
 			height: 20px;
 
+			@include media(500){
+				width: 15px;
+				height: 15px;
+			}
+
 		}
 		.pagination-posts{
-			bottom:75px;
+			bottom:20px;
 		}
 		.pagination-posts .swiper-pagination-bullet-active {
 		    // background: url(../images/dest/left-arr1.png) no-repeat 30% 50%;
@@ -140,9 +200,13 @@
 		.swiper-pagination-bullet:nth-child(1){
 			background: url(../images/dest/left-arr1-hov.png) no-repeat 30% 50%;
 			// background: url(../images/dest/left-arr1-hov.png) no-repeat 30% 50%;
+
+			
 		}
 		.swiper-pagination-bullet:nth-child(2){
 			background: url(../images/dest/right-arr1-hov.png) no-repeat 60% 50%;
+
+
 		}
 	}
 }
