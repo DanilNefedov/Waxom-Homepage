@@ -1,3 +1,4 @@
+
 .posts{
 	padding: 75px 0 0px;
 
@@ -26,12 +27,7 @@
 			.posts__slide{
 
 				.row{
-
-					// display: flex;
-					// justify-content: space-around;
-					
 						
-
 					.coll--33{
 						max-width: 370px;
 						padding: 0 10px;
@@ -76,6 +72,8 @@
 								background-color: #363636;
 								border-radius:3px 3px 0 0;
 								font:300 24px $font_montserrat;
+								-webkit-transition: .3s;
+								-o-transition: .3s;
 								transition: .3s;
 
 								@include media(750){
@@ -88,6 +86,8 @@
 								background-color: #252525;
 								border-radius: 0 0 3px 3px;
 								font:500 12px $font_raleway;
+								-webkit-transition: .3s;
+								-o-transition: .3s;
 								transition: .3s;
 
 								@include media(750){
@@ -98,13 +98,15 @@
 						}
 						.posts__text{
 							padding: 25px 0 30px 29px;
+							-webkit-transition: .3s;
+							-o-transition: .3s;
 							transition: .3s;
 
 							@include media(750){
 								padding: 10px 0 20px 0;
 							}
 
-							.title-20{
+							&--title-20{
 								font:400 20px $font_raleway;
 								color:$dark;
 
@@ -112,9 +114,8 @@
 									font-size: 16px;
 								}
 							}
-							.text-14{
+							&--text-14{
 								padding: 17px 0 25px;
-								// font:300 14px $font_montserrat;
 								font-size: 14px;
 								color: $font_color;
 								line-height: 20px;
@@ -124,16 +125,14 @@
 									font-size: 12px;
 								}
 							}
-							.link-posts{
+							&--link-posts{
 								color:$activ_color;
 								font-size: 14px;
 								position: relative;
 								display: block;
-								// padding-top: 5px;
 
 								&:after{
 									content: '';
-									// display: inline-block;
 									position: absolute;
 									width: 0;
 									height: 0;
@@ -161,7 +160,7 @@
 							.posts__text{
 								background-color: $dark_brown;
 
-								.title-20{
+								&--title-20{
 									color:$white;
 								}
 							}
@@ -187,19 +186,19 @@
 			bottom:20px;
 		}
 		.pagination-posts .swiper-pagination-bullet-active {
-		    // background: url(../images/dest/left-arr1.png) no-repeat 30% 50%;
+
 		  	
 		  	border-color: $hov_act;
 		}
 		.swiper-pagination-bullet{
-			// background: url(../images/dest/right-arr1.png) no-repeat 60% 50%;
+			
 			border-radius: 50%;
 			border:2px solid #d1d1d1;
 			
 		}
 		.swiper-pagination-bullet:nth-child(1){
 			background: url(../images/dest/left-arr1-hov.png) no-repeat 30% 50%;
-			// background: url(../images/dest/left-arr1-hov.png) no-repeat 30% 50%;
+			
 
 			
 		}

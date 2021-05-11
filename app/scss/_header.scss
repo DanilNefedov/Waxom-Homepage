@@ -1,3 +1,4 @@
+
 .header {
     position: absolute;
     width: 100%;
@@ -9,26 +10,29 @@
     	top:20px;
     }
 
-    .container{
-    	@include media(1050){
-	    	margin:0 0 0 auto;
-	    	padding: 0 15px 0 0 !important;
-	    }
-    }
-    
-
+  
 	&__row {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
-	    justify-content: space-between;
-	    align-items: center;
+	    -webkit-box-pack: justify;
+	        -ms-flex-pack: justify;
+	            justify-content: space-between;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
 
 
 	    @include media(1050){
 	    	width: calc(50% + 90px);
-	    	justify-content: flex-end;
+	    	-webkit-box-pack: end;
+	    	    -ms-flex-pack: end;
+	    	        justify-content: flex-end;
 
 	    	.logo{
-	    		flex-grow: 1;
+	    		-webkit-box-flex: 1;
+	    		    -ms-flex-positive: 1;
+	    		        flex-grow: 1;
 	    	}
 
 	    	@include media(500){
@@ -48,6 +52,8 @@
 		
 
 		 @include media(1050){
+		 	margin:0 0 0 auto;
+	    	padding: 0 15px 0 0 !important;
 
 		 	.active{
 				left:0px !important;
@@ -56,23 +62,30 @@
 					opacity: 0;
 				}
 				span:nth-child(1){
-					transform: translateY(9px) rotate(-135deg);
+					-webkit-transform: translateY(9px) rotate(-135deg);
+					    -ms-transform: translateY(9px) rotate(-135deg);
+					        transform: translateY(9px) rotate(-135deg);
 
 
 					@include media(500){
-						transform: translateY(7px) rotate(-135deg);
+						-webkit-transform: translateY(7px) rotate(-135deg);
+						    -ms-transform: translateY(7px) rotate(-135deg);
+						        transform: translateY(7px) rotate(-135deg);
 					}
 				}
 				span:nth-child(3){
-					transform: translateY(-9px) rotate(-45deg);
+					-webkit-transform: translateY(-9px) rotate(-45deg);
+					    -ms-transform: translateY(-9px) rotate(-45deg);
+					        transform: translateY(-9px) rotate(-45deg);
 
 					@include media(500){
-						transform: translateY(-7px) rotate(-45deg);
+						-webkit-transform: translateY(-7px) rotate(-45deg);
+						    -ms-transform: translateY(-7px) rotate(-45deg);
+						        transform: translateY(-7px) rotate(-45deg);
 					}
 				}
-
-
 			}
+
 
 
 			#sidebar{
@@ -82,6 +95,8 @@
 				top:0;
 				background-color: $white;
 				left: -250px;
+				-webkit-transition:all 300ms;
+				-o-transition:all 300ms;
 				transition:all 300ms;
 				
 
@@ -91,7 +106,7 @@
 				}
 
 
-				.btn-mobile{
+				.sidebar-btn-mobile{
 					position: absolute;
 					padding: 10px;
 					background-color: $white;
@@ -111,7 +126,11 @@
 						height: 4px;
 						background-color: $activ_color;
 						border-radius: 5px;
+						-webkit-transition: -webkit-transform 5	00ms;
+						transition: -webkit-transform 5	00ms;
+						-o-transition: transform 5	00ms;
 						transition: transform 5	00ms;
+						transition: transform 5	00ms, -webkit-transform 5	00ms;
 
 
 						& + span{
@@ -126,7 +145,10 @@
 				}
 
 				nav{
-					flex-direction: column;
+					-webkit-box-orient: vertical;
+					-webkit-box-direction: normal;
+					    -ms-flex-direction: column;
+					        flex-direction: column;
 					padding-top:27px;
 
 
@@ -135,6 +157,8 @@
 						font-size: 20px;
 						font-weight: 600;
 						padding:9px 0 9px 10px;
+						-webkit-transition: .5s;
+						-o-transition: .5s;
 						transition: .5s;
 
 						@include media(500){
@@ -155,8 +179,12 @@
 
 		.navigation{
 			padding-left: 140px;
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
-			justify-content: space-between;
+			-webkit-box-pack: justify;
+			    -ms-flex-pack: justify;
+			        justify-content: space-between;
 			
 			@include media(1150){
 				padding-left: 0;
