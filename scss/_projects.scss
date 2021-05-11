@@ -1,3 +1,4 @@
+
 .projects{
     padding: 75px 0 93px;
 
@@ -6,9 +7,16 @@
     }
     
     .container{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
 
         .text{
             line-height: 25px;
@@ -26,9 +34,16 @@
 
     &__tabs{
         padding: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
     &__tabs a{
         border-radius: 5px;
@@ -36,6 +51,8 @@
         font-size: 14px;
         font-weight: 400;
         color: #998675;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
         transition: 0.3s;
 
 
@@ -44,12 +61,14 @@
         }
     }
     &__button a{  
-   		font: 800 14px/1.5 $font_raleway;      
+        font: 800 14px/1.5 $font_raleway;      
         color: $white;
         background-color: $color_btn;
         padding: 17px 39px ;
         border-radius: 3px;
         text-transform: uppercase;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
         transition: .3s;
 
         @include media(570){
@@ -71,9 +90,14 @@
     }
 }
 .ui-tabs .ui-tabs-panel{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 
     .col--33{
         @include media(750){
@@ -88,14 +112,11 @@
 .ui-tabs .ui-tabs-nav{
     margin-bottom: 22px;
 
-    // @include media(450){
-    //     display: grid;
-    //     grid-auto-flow: dense;
-        
-    // }
 }
 .ui-tabs .ui-tabs-nav li{
     margin: 0px 5px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
     transition: 0.3s;
 
    @include media(570){
@@ -142,8 +163,9 @@
         &:hover {
             cursor: pointer;
             
-            .filtr{
-                filter: brightness(50%);
+            .projects__img--filtr{
+                -webkit-filter: brightness(50%);
+                        filter: brightness(50%);
             }
         }
     }

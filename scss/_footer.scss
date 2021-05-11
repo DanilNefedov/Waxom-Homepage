@@ -1,3 +1,4 @@
+
 .footer{
 	font-weight: 300;
 	color:$dark;
@@ -17,8 +18,12 @@
 
 		.row{
 			@include media(850){
-				flex-wrap: wrap;
-				flex-direction: row-reverse;
+				-ms-flex-wrap: wrap;
+				    flex-wrap: wrap;
+				-webkit-box-orient: horizontal;
+				-webkit-box-direction: reverse;
+				    -ms-flex-direction: row-reverse;
+				        flex-direction: row-reverse;
 			}
 		}
 
@@ -38,17 +43,16 @@
 			a{
 				display: block;
 			}
-			.text{
+			.footer__text{
 				text-align: left;
 				padding: 20px 0 27px; 
 				margin: 0;
 				font-size: 14px;
 				line-height: 20px;
 				word-wrap: break-word;
-				// max-width: 264px;
 				line-height: 23px;
 			}
-			.link--style{
+			.footer__link--style{
 				display: block;
 				color:$white;
 				border-bottom: 1px solid transparent;
@@ -75,16 +79,20 @@
 					font-size: 18px;
 				}
 			}
-			.commit{
+			.footer__commit{
 				
-				.data {
+				&--data {
 					color:$data_color;
 					padding:13px 0 10px;	 
+					-webkit-transition: .3s;	 
+					-o-transition: .3s;	 
 					transition: .3s;
 					font-size: 12px;
 				}
-				.data-text {
+				&--data-text {
 					color:$dark;	
+					-webkit-transition: .3s;	
+					-o-transition: .3s;	
 					transition: .3s;
 					font-size: 14px;
 					word-wrap: break-word;
@@ -98,10 +106,10 @@
 				}
 
 				&:hover{
-					.data{
+					.footer__commit--data{
 						color:$white;
 					}
-					.data-text{
+					.footer__commit--data-text{
 						color:$activ_color;
 					}
 				}
@@ -113,6 +121,8 @@
 				&__text{
 					color:$dark;
 					font-size: 14px;
+					-webkit-transition: .3s;
+					-o-transition: .3s;
 					transition: .3s;
 					line-height: 21px;
 
@@ -121,6 +131,8 @@
 					}
 					.link-twitt{
 						color:#959595;
+						-webkit-transition: .3s;
+						-o-transition: .3s;
 						transition: .3s;
 					}
 				}
@@ -129,6 +141,8 @@
 					color:$data_color;
 					padding: 7px 0 26px;
 					border-bottom: 1px solid $data_color;
+					-webkit-transition: .3s;
+					-o-transition: .3s;
 					transition: .3s;
 				}
 
@@ -151,7 +165,9 @@
 		}
 		.col--25:nth-child(4){
 			@include media(850){
-				order:-1;
+				-webkit-box-ordinal-group:0;
+				    -ms-flex-order:-1;
+				        order:-1;
 			}
 		}
 	}
@@ -198,12 +214,18 @@
 
 
 		ul{
+			display: -webkit-box;
+			display: -ms-flexbox;
 			display: flex;
-			align-items: center;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+			        align-items: center;
 
 
 			@include media(790){
-				justify-content: center;
+				-webkit-box-pack: center;
+				    -ms-flex-pack: center;
+				        justify-content: center;
 				padding: 5px 0;
 			}
 
@@ -227,6 +249,8 @@
 			}
 
 			a{
+				-webkit-transition: .2s;
+				-o-transition: .2s;
 				transition: .2s;
 				color:$dark;
 
