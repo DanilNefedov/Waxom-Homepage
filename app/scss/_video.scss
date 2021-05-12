@@ -10,11 +10,15 @@
   video {
     -o-object-fit: cover;
        object-fit: cover;
-    max-height: 705px;
+    min-height: 705px;
     width: 100%;
 
     @include media(1050){
-      max-height: 500px;
+      min-height: 500px;
+
+      @include media(770){
+        min-height: 300px;
+      }
     }
   }
   .text--white{
