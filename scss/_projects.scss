@@ -104,7 +104,7 @@
             width:calc(50% - 15px);
 
             @include media(570){
-                margin-bottom: 0;
+                margin-bottom: 10px;
             }
         }
     }
@@ -189,7 +189,50 @@
 
         a{
             border:none;
-            padding-right: 50px;
+        }
+        a + a{
+            
+            padding-left: 50px;
+        }
+
+        @include media(970){
+            margin-top:-10%;
+            margin-left: 10%;
+            img{
+                max-width: 80%;
+            }
+
+                @include media(760){
+                    margin-left: 8%;
+
+                    @include media(750){
+                        margin-left: 14%;
+                        margin-top: -16%;
+                        img{
+                            max-width: 100%;
+                        }
+                        @include media(550){
+                            margin-left:12%; 
+
+                            @include media(450){
+                                margin-left: 10%;
+                                img{
+                                    max-width: 90%;
+                                }
+
+                                @include media(400){
+                                    
+                                    a + a{
+                                        padding-left: 20px;
+                                    }
+                                    img{
+                                        max-width: 60%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
         }
     }
 
@@ -200,7 +243,7 @@
         position: relative;
 
         @include media(570){
-            padding: 15px 0 15px 0;
+            padding: 15px 0 15px 5px;
         }
 
         &:before {
